@@ -10,8 +10,7 @@
 # ------------------ 使用者可調整參數 ------------------
 CONTAINER_NAME="redis-stack"
 IMAGE_NAME="redis/redis-stack:7.4.0-v1"
-BASE_DIR="$(pwd)"        # 預設使用目前目錄
-LOG_DIR="${BASE_DIR}/logs"
+LOG_DIR="$(pwd)/logs" # 預設使用目前目錄下的logs
 REMOVE_OLD_CONTAINER="false"
 
 # -e REDIS_ARGS 中的配置範例
