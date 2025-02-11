@@ -9,7 +9,7 @@
 
 # ------------------ 使用者可調整參數 ------------------
 CONTAINER_NAME="redis-stack"
-IMAGE_NAME="redis-stack:7.4.0-v1"
+IMAGE_NAME="redis-stack:latest"
 BASE_DIR="$(pwd)"        # 預設使用目前目錄
 LOG_DIR="${BASE_DIR}/logs"
 REMOVE_OLD_CONTAINER="false"
