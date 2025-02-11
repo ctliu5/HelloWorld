@@ -15,7 +15,7 @@ LOG_DIR="${BASE_DIR}/logs"
 REMOVE_OLD_CONTAINER="false"
 
 # -e REDIS_ARGS 中的配置範例
-REDIS_ARGS='--logfile "/logs/log_redis-server.log" --maxmemory 12884901888'
+REDIS_ARGS='--logfile /logs/log_redis-server.log --maxmemory 12884901888'
 PORT_MAPPING="-p 6379:6379 -p 8001:8001 -p 26379:26379"
 
 # ------------------ 函式：顯示訊息 ------------------
