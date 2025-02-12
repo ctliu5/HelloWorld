@@ -39,10 +39,11 @@ sudo apt-get install -y docker-ce docker-ce-cli containerd.io docker-buildx-plug
 echo "Testing Docker installation..."
 sudo docker run hello-world || echo "Docker test failed. Please check the installation."
 
-# 添加用戶到 docker 群組
-echo "Configuring Docker user group..."
-sudo groupadd docker || true
-sudo usermod -aG docker $USER
+# 建立 docker 群組 
+echo "Creating Docker group..." 
+sudo groupadd docker || true 
 
-# 提示用戶重啟系統或登出後再測試
-echo "Installation completed! Please log out and log back in or restart your system to use Docker without sudo."
+# 提示用戶需要手動將自己加入 docker 群組
+echo "Important: To use Docker without sudo, you need to add your user to the docker group."
+echo "Please run this command manually: sudo usermod -aG docker \$USER"
+echo "After running the command, log out and log back in or restart your system for the changes to take effect."
